@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Railway Demo Service</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* 커스텀 스타일: 화면 중앙 정렬 및 배경색 */
+        body, html {
+            height: 100%;
+            background: linear-gradient(135deg, #1e2024 0%, #23272b 100%);
+            color: white;
+        }
+        .cover-container {
+            max-width: 42em;
+        }
+        .btn-custom {
+            background-color: #9333ea; /* Railway 스타일의 보라색 */
+            border-color: #9333ea;
+            color: white;
+        }
+        .btn-custom:hover {
+            background-color: #7e22ce;
+            color: #e9d5ff;
+        }
+    </style>
+</head>
+<body class="d-flex h-100 text-center text-bg-dark">
+
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column justify-content-center">
+    <main class="px-3">
+        <h1 class="display-4 fw-bold" th:text="${greeting}">환영합니다!</h1>
+        <p class="lead my-4">이 페이지는 Spring Boot와 Railway를 통해 배포되었습니다.<br>빠르고 안정적인 클라우드 배포를 경험해보세요.</p>
+        <p class="lead">
+            <a href="#" class="btn btn-lg btn-custom fw-bold border-white bg-white text-dark">더 알아보기</a>
+        </p>
+    </main>
+
+    <footer class="mt-auto text-white-50 py-3">
+        <p>Created for Railway Deployment Test.</p>
+    </footer>
+</div>
+
+</body>
+</html>
